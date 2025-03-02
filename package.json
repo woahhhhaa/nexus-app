@@ -3,17 +3,32 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@mui/icons-material": "^6.4.6",
+    "@mui/lab": "^6.0.0-beta.29",
+    "@mui/material": "^6.4.6",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.2.0",
     "@testing-library/user-event": "^13.5.0",
+    "@types/d3-geo": "^3.1.0",
     "@types/jest": "^27.5.2",
     "@types/node": "^16.18.126",
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
+    "@types/react-router-dom": "^5.3.3",
+    "@types/react-simple-maps": "^3.0.6",
+    "@types/topojson-client": "^3.1.5",
+    "d3-geo": "^3.1.1",
+    "firebase": "^11.3.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-router-dom": "^7.2.0",
     "react-scripts": "5.0.1",
+    "react-simple-maps": "^3.0.0",
+    "react-tooltip": "^5.28.0",
+    "topojson-client": "^3.1.0",
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
   },
@@ -21,7 +36,17 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "seed": "ts-node -r dotenv/config src/scripts/seedData.ts",
+    "seed:clear": "ts-node -r dotenv/config src/scripts/seedData.ts --clear",
+    "create-admin": "ts-node -r dotenv/config src/scripts/createAdmin.ts create-admin",
+    "promote-admin": "ts-node -r dotenv/config src/scripts/createAdmin.ts promote-admin",
+    "upload-csv": "ts-node -r dotenv/config src/scripts/uploadCsvData.ts",
+    "upload-csv:clear": "ts-node -r dotenv/config src/scripts/uploadCsvData.ts --clear"
+  },
+  "devDependencies": {
+    "dotenv": "^16.3.1",
+    "ts-node": "^10.9.1"
   },
   "eslintConfig": {
     "extends": [
